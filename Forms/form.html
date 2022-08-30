@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form</h1>
+
+    <form name="clientform" method="post" action="javascript:alert('Form submitted');" novalidate>
+        <fieldset name="fieldsetdetails">
+            <legend>Details</legend>
+            Name: <input type="text" name="fullname" required> <br>
+            Email: <input type="text" name="emailaddress" required><br>
+        </fieldset>
+        <fieldset name="fieldsetdemographics">
+            <legend>Demographics</legend>
+            Age: <input type="radio" name="age" value="Under 18"> Under 18
+                 <input type="radio" name="age" value="Under 50"> Under 50
+                 <input type="radio" name="age" value="50 and over"> 50 and over<br>
+            County: <select name="county">
+                <option value="">Select a county</option>
+                <option value="BR">Broward</option>
+                <option value="MD">Miami-Dade</option>
+                <option valud="PB">Palm Beach</option>
+            </select>
+        </fieldset>
+        <input type="submit" name="sendform" value="Send Form" onclick="return validateForm(document.clientform);">
+        <input type="submit" name="outputform" value="Output Form" onclick="return outputForm(document.clientform);">
+    </form>
+
+    <script src="form.js"></script>
+</body>
+</html>

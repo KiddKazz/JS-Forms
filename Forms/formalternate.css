@@ -1,0 +1,6 @@
+#errormessage, #emailerror {
+    border: 3px solid red;
+    background-color: lightcoral;
+    color: white;
+    display: none;
+}
